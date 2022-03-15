@@ -37,4 +37,11 @@ recive:
 
 
 
+Note
+----------
+```
+Runing the script on windows:
+https://www.youtube.com/watch?v=1ap3hL-UR9I
+```
+
 
