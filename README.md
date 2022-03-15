@@ -14,7 +14,7 @@ usage
 ```
 send:
 sudo chmod 775 send  
-./send "file" "host ip" 
+./send "file" "reciver ip" 
 
 recive:
 sudo chmod 775 recive 
