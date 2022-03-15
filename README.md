@@ -29,6 +29,11 @@ send:
 ```
 ![send](https://user-images.githubusercontent.com/97359380/158378893-f20faf36-23eb-433e-abea-e4efb6231ff3.PNG)
 
+```
+recive:
+```
+
+![recive](https://user-images.githubusercontent.com/97359380/158379003-312f8a92-0095-4972-9fb5-30cbabd54f7c.PNG)
 
 
 
