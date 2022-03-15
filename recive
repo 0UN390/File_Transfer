@@ -1,0 +1,21 @@
+#!/bin/bash
+source ./color
+
+first_port='5557'
+second_port='5558'
+echo -e "${green}Listening...."
+file='file.txt'
+file2='file.txt'
+
+function sender
+{
+file2=$(nc -w 20 -l -p $second_port | pv)
+file=$file2
+nc  -w 10 -l -p $first_port > $file
+echo -e "${green}Recived file $file"
+echo -e "${green}Done."
+
+}
+
+sender
+

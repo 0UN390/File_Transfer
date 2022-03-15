@@ -1,0 +1,30 @@
+#!/bin/bash
+source ./color
+
+file=$1
+ip=$2
+
+#ping the target to see if it is up or down
+ping=`ping -c 1 $ip | grep bytes | wc -l`
+if [ "$ping" -gt 1 ];
+then
+echo -e "\n${green}$ip is up\n";
+else
+echo -e "\n${red}$ip is down\n";
+exit
+fi
+
+first_port='5557'
+second_port='5558'
+
+echo $file | nc -w 2 $ip $second_port
+
+if(nc -w 2 $ip $first_port < $file);
+then
+echo -e "${green}Sending..."
+echo -e "${green}Done."
+
+else
+echo -e "${red}sended nothing!!"
+exit
+fi
